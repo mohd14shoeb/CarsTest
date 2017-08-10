@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96124D9D1F3C8873004D68AE /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96124D9C1F3C8873004D68AE /* CarTableViewCell.swift */; };
 		96474A381F3C6BA200317B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96474A371F3C6BA200317B8B /* AppDelegate.swift */; };
 		96474A3A1F3C6BA200317B8B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96474A391F3C6BA200317B8B /* MasterViewController.swift */; };
 		96474A3C1F3C6BA200317B8B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96474A3B1F3C6BA200317B8B /* DetailViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		26D7E8C34FA75D08C3D02163 /* Pods-CarsTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarsTest/Pods-CarsTest.release.xcconfig"; sourceTree = "<group>"; };
+		96124D9C1F3C8873004D68AE /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		96474A341F3C6BA200317B8B /* CarsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96474A371F3C6BA200317B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96474A391F3C6BA200317B8B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				96474A451F3C6BA300317B8B /* Info.plist */,
 				969550C81F3C6CA2008F015A /* Networking.swift */,
 				969550CC1F3C6DBB008F015A /* Car.swift */,
+				96124D9C1F3C8873004D68AE /* CarTableViewCell.swift */,
 			);
 			path = CarsTest;
 			sourceTree = "<group>";
@@ -192,11 +195,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CarsTest/Pods-CarsTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +236,7 @@
 			files = (
 				96474A3C1F3C6BA200317B8B /* DetailViewController.swift in Sources */,
 				96474A3A1F3C6BA200317B8B /* MasterViewController.swift in Sources */,
+				96124D9D1F3C8873004D68AE /* CarTableViewCell.swift in Sources */,
 				969550CD1F3C6DBB008F015A /* Car.swift in Sources */,
 				96474A381F3C6BA200317B8B /* AppDelegate.swift in Sources */,
 				969550C91F3C6CA2008F015A /* Networking.swift in Sources */,

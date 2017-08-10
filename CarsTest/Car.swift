@@ -10,7 +10,6 @@ import Foundation
 import SwiftyJSON
 
 class Car {
-    var carImageUrl:        String?
     var color:              String?
     var fuelLevel:          String?
     var fuelType:           String?
@@ -29,7 +28,7 @@ class Car {
     
     class func parseJSONDictionary(json: JSON) -> Car {
         let car = Car()
-        car.carImageUrl = json["carImageUrl"].string
+        
         car.color = json["color"].string
         car.fuelLevel = json["fuelLevel"].string
         car.fuelType = json["fuelType"].string
@@ -57,5 +56,26 @@ class Car {
             }
         }
         return cars
+    }
+    
+    var carImagePath: String? {
+        guard let color = self.color else {
+            return nil
+        }
+        
+        guard let modelIdentifier = self.modelIdentifier else {
+            return nil
+        }
+        
+        let path = "https://prod.drive-now-content.com/fileadmin/user_upload_global/assets/cars/\(modelIdentifier)/\(color)/2x/car.png"
+        return path
+    }
+    
+    var carImageURL: URL? {
+        guard let carImagePath = carImagePath else {
+            return nil
+        }
+        
+        return URL(string: carImagePath)
     }
 }

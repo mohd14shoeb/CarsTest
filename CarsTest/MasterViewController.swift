@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MasterViewController: UITableViewController {
 
@@ -16,14 +17,7 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Networking.getCars { (cars: [Car]?, error: Error?) in
-            guard let cars = cars else {
-                return
-            }
-            self.cars = cars
-            self.tableView.reloadData()
-        }
+        getCars()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -35,16 +29,15 @@ class MasterViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object = cars[indexPath.row]
+                let car = cars[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
+                controller.car = car
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -60,13 +53,21 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cars.count
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CarTableViewCell.CellHeight
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
-        let object = cars[indexPath.row] 
-        cell.textLabel!.text = object.name
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: CarTableViewCell.reuseID, for: indexPath) as? CarTableViewCell {
+            let car = cars[indexPath.row]
+            cell.nameLabel!.text = car.name
+            if let carImageURL = car.carImageURL {
+                cell.picImageView.af_setImage(withURL:carImageURL)
+            }
+            return cell
+        }
+        return UITableViewCell()
     }
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -82,7 +83,15 @@ class MasterViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
-
+    
+    func getCars() {
+        Networking.getCars { (cars: [Car]?, error: Error?) in
+            guard let cars = cars else {
+                return
+            }
+            self.cars = cars
+            self.tableView.reloadData()
+        }
+    }
 }
 

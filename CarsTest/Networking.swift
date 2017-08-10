@@ -16,7 +16,7 @@ enum API: String {
 }
 
 class Networking {
-    class func getCars(completion:@escaping (_ cars: [Car]?, _ error: NSError?) -> Void) -> Void {
+    class func getCars(completion:@escaping (_ cars: [Car]?, _ error: NSError?) -> Void) {
         Alamofire.request(API.basePATH.rawValue + API.carsPATH.rawValue).responseJSON { response in
             if response.result.isFailure {
 
