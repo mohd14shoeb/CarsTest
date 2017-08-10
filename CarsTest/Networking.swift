@@ -10,6 +10,17 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+enum NetworkErorCodes: Int {
+    case getFailure         = 10
+    case invalidDataFormat  = 11
+}
+
+enum NetworkErorConstants: String {
+    case errorDomain        = "com.yurikoles.network"
+    case invalidDataDesc    = "Server had sent data in invalid format"
+    case getFailureDesc     = "Netwrok or server problem"
+}
+
 enum API: String {
     case basePATH = "http://www.codetalk.de"
     case carsPATH = "/cars.json"
@@ -20,14 +31,16 @@ class Networking {
         Alamofire.request(API.basePATH.rawValue + API.carsPATH.rawValue).responseJSON { response in
             if response.result.isFailure {
 
-                completion(nil, NSError(domain: "com.yurikoles.network",
-                                        code: response.response?.statusCode ?? 11,
-                                        userInfo: [NSLocalizedDescriptionKey: response.result.error?.localizedDescription ?? ""]))
+                completion(nil, NSError(domain: NetworkErorConstants.errorDomain.rawValue,
+                                        code: response.response?.statusCode ?? NetworkErorCodes.getFailure.rawValue,
+                                        userInfo: [NSLocalizedDescriptionKey: response.result.error?.localizedDescription ?? NetworkErorConstants.getFailureDesc.rawValue]))
                 return
             }
             
             guard let data = response.result.value as? [Dictionary<String, Any>] else {
-                completion(nil, NSError(domain: "com.yurikoles.network", code: 10, userInfo: nil))
+                completion(nil, NSError(domain: NetworkErorConstants.errorDomain.rawValue,
+                                        code: NetworkErorCodes.invalidDataFormat.rawValue,
+                                        userInfo: [NSLocalizedDescriptionKey: NetworkErorConstants.invalidDataDesc.rawValue]))
                 return
             }
             
