@@ -13,6 +13,8 @@
 		96474A3F1F3C6BA300317B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96474A3D1F3C6BA300317B8B /* Main.storyboard */; };
 		96474A411F3C6BA300317B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96474A401F3C6BA300317B8B /* Assets.xcassets */; };
 		96474A441F3C6BA300317B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96474A421F3C6BA300317B8B /* LaunchScreen.storyboard */; };
+		969550C91F3C6CA2008F015A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969550C81F3C6CA2008F015A /* Networking.swift */; };
+		969550CD1F3C6DBB008F015A /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969550CC1F3C6DBB008F015A /* Car.swift */; };
 		FBFA7ED9D9CEC41850E52AD8 /* Pods_CarsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37D61C4E84E41EFD36F585D /* Pods_CarsTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		96474A401F3C6BA300317B8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96474A431F3C6BA300317B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96474A451F3C6BA300317B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		969550C81F3C6CA2008F015A /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		969550CC1F3C6DBB008F015A /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		9F52817397B27E045F03B663 /* Pods-CarsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarsTest/Pods-CarsTest.debug.xcconfig"; sourceTree = "<group>"; };
 		B37D61C4E84E41EFD36F585D /* Pods_CarsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +83,8 @@
 				96474A401F3C6BA300317B8B /* Assets.xcassets */,
 				96474A421F3C6BA300317B8B /* LaunchScreen.storyboard */,
 				96474A451F3C6BA300317B8B /* Info.plist */,
+				969550C81F3C6CA2008F015A /* Networking.swift */,
+				969550CC1F3C6DBB008F015A /* Car.swift */,
 			);
 			path = CarsTest;
 			sourceTree = "<group>";
@@ -225,7 +231,9 @@
 			files = (
 				96474A3C1F3C6BA200317B8B /* DetailViewController.swift in Sources */,
 				96474A3A1F3C6BA200317B8B /* MasterViewController.swift in Sources */,
+				969550CD1F3C6DBB008F015A /* Car.swift in Sources */,
 				96474A381F3C6BA200317B8B /* AppDelegate.swift in Sources */,
+				969550C91F3C6CA2008F015A /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
