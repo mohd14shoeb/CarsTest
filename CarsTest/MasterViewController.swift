@@ -85,14 +85,7 @@ class MasterViewController: UITableViewController {
     }
     
     func getCars() {
-        Networking.getCars { (cars: [Car]?, error: NSError?) in
-            if let error = error {
-                let controller = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                controller.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                self.present(controller, animated: true, completion: nil)
-                return
-            }
-            
+        getCarsWithoutError { cars in
             guard let cars = cars else {
                 return
             }

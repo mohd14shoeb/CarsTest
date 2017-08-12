@@ -16,6 +16,9 @@
 		96474A441F3C6BA300317B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96474A421F3C6BA300317B8B /* LaunchScreen.storyboard */; };
 		969550C91F3C6CA2008F015A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969550C81F3C6CA2008F015A /* Networking.swift */; };
 		969550CD1F3C6DBB008F015A /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969550CC1F3C6DBB008F015A /* Car.swift */; };
+		96F4DD871F3F460600998307 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4DD861F3F460600998307 /* MapViewController.swift */; };
+		96F4DD891F3F49E900998307 /* CarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4DD881F3F49E900998307 /* CarAnnotation.swift */; };
+		96F4DD8B1F3F52EF00998307 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4DD8A1F3F52EF00998307 /* CarViewController.swift */; };
 		FBFA7ED9D9CEC41850E52AD8 /* Pods_CarsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37D61C4E84E41EFD36F585D /* Pods_CarsTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 		96474A451F3C6BA300317B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		969550C81F3C6CA2008F015A /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		969550CC1F3C6DBB008F015A /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		96F4DD861F3F460600998307 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		96F4DD881F3F49E900998307 /* CarAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarAnnotation.swift; sourceTree = "<group>"; };
+		96F4DD8A1F3F52EF00998307 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		9F52817397B27E045F03B663 /* Pods-CarsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarsTest/Pods-CarsTest.debug.xcconfig"; sourceTree = "<group>"; };
 		B37D61C4E84E41EFD36F585D /* Pods_CarsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,18 +84,29 @@
 		96474A361F3C6BA200317B8B /* CarsTest */ = {
 			isa = PBXGroup;
 			children = (
+				96F4DD8C1F3F55BA00998307 /* New Group */,
 				96474A371F3C6BA200317B8B /* AppDelegate.swift */,
 				96474A391F3C6BA200317B8B /* MasterViewController.swift */,
 				96474A3B1F3C6BA200317B8B /* DetailViewController.swift */,
+				96F4DD861F3F460600998307 /* MapViewController.swift */,
 				96474A3D1F3C6BA300317B8B /* Main.storyboard */,
+				96F4DD8A1F3F52EF00998307 /* CarViewController.swift */,
+				96124D9C1F3C8873004D68AE /* CarTableViewCell.swift */,
 				96474A401F3C6BA300317B8B /* Assets.xcassets */,
 				96474A421F3C6BA300317B8B /* LaunchScreen.storyboard */,
 				96474A451F3C6BA300317B8B /* Info.plist */,
 				969550C81F3C6CA2008F015A /* Networking.swift */,
 				969550CC1F3C6DBB008F015A /* Car.swift */,
-				96124D9C1F3C8873004D68AE /* CarTableViewCell.swift */,
+				96F4DD881F3F49E900998307 /* CarAnnotation.swift */,
 			);
 			path = CarsTest;
+			sourceTree = "<group>";
+		};
+		96F4DD8C1F3F55BA00998307 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		ACC787C64F49787C2F56AAC8 /* Frameworks */ = {
@@ -235,11 +252,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				96474A3C1F3C6BA200317B8B /* DetailViewController.swift in Sources */,
+				96F4DD8B1F3F52EF00998307 /* CarViewController.swift in Sources */,
 				96474A3A1F3C6BA200317B8B /* MasterViewController.swift in Sources */,
 				96124D9D1F3C8873004D68AE /* CarTableViewCell.swift in Sources */,
 				969550CD1F3C6DBB008F015A /* Car.swift in Sources */,
 				96474A381F3C6BA200317B8B /* AppDelegate.swift in Sources */,
 				969550C91F3C6CA2008F015A /* Networking.swift in Sources */,
+				96F4DD871F3F460600998307 /* MapViewController.swift in Sources */,
+				96F4DD891F3F49E900998307 /* CarAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

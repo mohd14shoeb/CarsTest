@@ -23,9 +23,4 @@ class CarTableViewCell: UITableViewCell {
     class var CellHeight: CGFloat {
         return kCellHeight
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 }

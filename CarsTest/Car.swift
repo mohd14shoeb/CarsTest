@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import MapKit
 
 class Car {
     var color:              String?
@@ -27,8 +28,7 @@ class Car {
     var transmission:       String?
     
     class func parseJSONDictionary(json: JSON) -> Car {
-        let car = Car()
-        
+        let car = Car()        
         car.color = json["color"].string
         car.fuelLevel = json["fuelLevel"].string
         car.fuelType = json["fuelType"].string

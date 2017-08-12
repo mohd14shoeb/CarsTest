@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NUz-ai-Tvq">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -63,10 +63,11 @@
             </objects>
             <point key="canvasLocation" x="709" y="129"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Split-->
         <scene sceneID="Nki-YV-4Qg">
             <objects>
-                <splitViewController id="H1p-Uh-vWS" sceneMemberID="viewController">
+                <splitViewController id="H1p-Uh-vWS" userLabel="Split" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" id="snX-Dj-YeZ"/>
                     <toolbarItems/>
                     <connections>
                         <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
@@ -137,6 +138,46 @@
             </objects>
             <point key="canvasLocation" x="709" y="-630"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="UxV-kl-aMt">
+            <objects>
+                <tabBarController id="NUz-ai-Tvq" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bd8-xR-bq0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="H1p-Uh-vWS" kind="relationship" relationship="viewControllers" id="7Yc-ha-nLk"/>
+                        <segue destination="WP4-1f-tON" kind="relationship" relationship="viewControllers" id="twL-1p-LlR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3vH-fH-tvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1865" y="-80"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="Z2m-cC-Uj2">
+            <objects>
+                <viewController id="WP4-1f-tON" userLabel="Map" customClass="MapViewController" customModule="CarsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xPs-1J-sUI"/>
+                        <viewControllerLayoutGuide type="bottom" id="DM5-XF-yqT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R3N-XW-7rp" customClass="MKMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="delegate" destination="WP4-1f-tON" id="mel-l8-oyg"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="pc0-ND-U37"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vkL-Wm-lSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-808" y="567"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
             <objects>
@@ -155,6 +196,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>
